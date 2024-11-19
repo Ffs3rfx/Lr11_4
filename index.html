@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студентський Об'єкт</title>
+   <script>
+    function Student(name, surname, age, course) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.course = course;
+
+        this.GetOlder = function (years) {
+            this.age += years;
+            console.log(`${this.name} став(ла) старшим(ою) на ${years} років.`);
+        };
+
+        this.ChangeSurname = function (newSurname) {
+            this.surname = newSurname;
+            console.log(`Прізвище змінено на ${newSurname}.`);
+        };
+
+        this.MoveToSecondCourse = function () {
+            this.course++;
+            console.log(`${this.name} переведено на ${this.course} курс.`);
+        };
+    }
+
+    // Приклад використання:
+    const student = new Student("Олег", "Іваненко", 18, 1);
+    student.GetOlder(2);
+    student.ChangeSurname("Петренко");
+    student.MoveToSecondCourse();
+</script>
+</head>
+<body>
+    <h1>Демонстрація створення та роботи з об'єктом Student</h1>
+
+    <div id="info">
+        <!-- Тут буде виводитись інформація про студента -->
+    </div>
+</body>
+</html>
